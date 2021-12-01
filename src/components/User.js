@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 
-const Header = ({user}) => {
+const User = ({user}) => {
   return (
-      <header>
+      <section>
           <h1>F I T L I T</h1>
           <h2>Hi, {user}</h2>
-      </header>
+      </section>
   )
 }
 
-export default Header;
+export default User;
