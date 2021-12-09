@@ -9,25 +9,31 @@ import TimeDisplay from './components/TimeDisplay';
 import Graph from './components/Graph';
 import WeekStats from './components/WeekStats';
 import Friends from './components/Friends';
+import testData from './testData';
 
 const App = () => {
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState({})
   
-  useEffect (() => {
+  const loadUserInfo = async () => {
+    //refactor below to make id dynamic
+    const userToFind = await testData.find(user => user.id === 1)
+    setUser(userToFind)
+  }
+  useEffect ((id) => {
     //refactor this to take in a dynamic user on login
-    setUser("Connie")
-  })
+    loadUserInfo(id = 1);
+  }, [])
 
   return (
     <>
-    <Header user={user}/>
+    <Header user={user.name}/>
     <main>
-      <User user={user}/>
-      <Stats user={user}/>
-      <TimeDisplay user={user}/>
-      <Graph user={user}/>
-      <WeekStats user={user} />
-      <Friends user={user} />
+      <User userName={user.name}/>
+      <Stats user={user.name}/>
+      <TimeDisplay user={user.name}/>
+      <Graph user={user.name}/>
+      <WeekStats user={user.name} />
+      <Friends user={user.name} />
     </main>
     </>
   );

@@ -1,30 +1,30 @@
 import React, { useEffect } from 'react';
 
-const User = ({user}) => {
+const User = ({userName}) => {
   return (
-    <section class="user-main">
-    <div class="wrapper-top">
-      <article class="user-profile">
+    <section className="user-main">
+    <div className="wrapper-top">
+      <article className="user-profile">
         <h2>Your Profile</h2>
-          <p class="user-name"></p>
-          <p class="user-address"></p>
-          <p class="user-email"></p>
-          <p class="user-stride-length"></p>
-          <p class="user-friends-length"></p>
+          <p className="user-name">{userName}</p>
+          <p className="user-address">{userName}</p>
+          <p className="user-email"></p>
+          <p className="user-stride-length"></p>
+          <p className="user-friends-length"></p>
       </article>
-      <div class="user-container">
-        <article class="user-latest-sleep-stats">
+      <div className="user-container">
+        <article className="user-latest-sleep-stats">
           <h3>Last Night's Sleep Stats</h3>
-          <p class="sleep-quantity-last-night"></p>
-          <p class="sleep-quality-last-night"></p>
+          <p className="sleep-quantity-last-night"></p>
+          <p className="sleep-quality-last-night"></p>
         </article>
-        <article class="user-step-goal">
+        <article className="user-step-goal">
           <h3>Your Daily Step Goal</h3>
-            <p class="user-step-goal-input"></p>
+            <p className="user-step-goal-input"></p>
         </article>
-        <article class="community-step-goal">
+        <article className="community-step-goal">
           <h3>Community Average Step Goal</h3>
-          <p class="community-step-goal-input"></p>
+          <p className="community-step-goal-input"></p>
         </article>
       </div>
     </div>
